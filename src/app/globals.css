@@ -3,11 +3,27 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary: #0077b5;
+  --primary-dark: #005885;
+  --secondary: #f3f2ef;
+  --accent: #ff6b35;
+  --text-muted: #666666;
+  --border: #e1e5e9;
+  --card: #ffffff;
+  --card-hover: #f8f9fa;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-text-muted: var(--text-muted);
+  --color-border: var(--border);
+  --color-card: var(--card);
+  --color-card-hover: var(--card-hover);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -16,11 +32,57 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --secondary: #1a1a1a;
+    --text-muted: #a0a0a0;
+    --border: #333333;
+    --card: #1a1a1a;
+    --card-hover: #2a2a2a;
   }
 }
 
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
 body {
+  max-width: 100vw;
+  overflow-x: hidden;
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Custom scrollbar for webkit browsers */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
 }
